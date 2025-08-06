@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DRBCCC Hindu College FAQ</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #002366;
+      color: white;
+      padding: 10px 20px;
+    }
+    header img {
+      height: 80px;
+    }
+    header h1 {
+      font-size: 60px;
+      text-align: center;
+      flex: 1;
+      margin: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .category {
+      background-color: #ffe600;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      padding: 12px 15px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0, 35, 102, 0.15);
+      user-select: none;
+      transition: background-color 0.3s;
+    }
+    .category:hover {
+      background-color: #ffea33;
+    }
+    .questions {
+      display: none;
+      padding-left: 20px;
+      margin-bottom: 25px;
+    }
+    .question {
+      margin: 10px 0;
+      background-color: #f9f871;
+      border-radius: 5px;
+      padding: 12px 15px;
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0, 35, 102, 0.1);
+      user-select: none;
+      font-size: 15px;
+      transition: background-color 0.2s;
+    }
+    .question:hover {
+      background-color: #fff370;
+    }
+    .answer {
+      display: none;
+      margin-top: 6px;
+      padding: 10px 16px;
+      background-color: #fffdd0;
+      border-left: 5px solid #002366;
+      font-size: 14px;
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #002366;
+      color: white;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+    /* Show/hide classes for smooth animation */
+    .questions.show, .answer.show {
+      display: block;
+      animation: fadeIn 0.24s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 15px; }
+      .container { padding: 10px 4px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="lift logo.png" alt="Left Logo" />
+    <h1>DRBCCC HINDU COLLEGE – FAQ</h1>
+    <img src="right logo.png" alt="Right Logo" />
+  </header>
+
+  <div class="container" id="faq"></div>
+
+  <footer>
+    &copy; 2025 DRBCCC Hindu College. All rights reserved.
+  </footer>
+
+  <script>
+    const faqData = [
+      {
+        category: "🎓 GENERAL QUESTIONS ABOUT THE COLLEGE",
+        qas: [
+          ["Where is DRBCCC Hindu College located exactly?", "The college is located at: 📍 43FF+CH5, Chennai - Tiruttani Highway, Dharmamurthy Nagar, Pattabiram, Tamil Nadu – 600072."],
+          ["What is the full form of DRBCCC?", "DRBCCC stands for Dharmamurthi Rao Bahadur Calavala Cunnan Chetty's Hindu College."],
+          ["What are the college timings?", "Shift 1: 9:00 AM to 3:00 PM\nShift 2: 11:00 AM to 4:30 PM."],
+          ["Is the college strict about attendance?", "Yes, the college expects students to maintain at least 75% attendance, which is mandatory. Falling short may affect internal marks and exam eligibility."],
+          ["How is the campus environment?", "The campus has a decent environment with a positive atmosphere and areas that are constantly improving."],
+          ["Is mobile phone allowed inside the campus?", "Yes, mobile phones are allowed only during non-class hours. They are not permitted during lectures."],
+          ["Are there any rules we must strictly follow?", "Yes, students are expected to follow rules related to dress code, ID card usage, and discipline within the campus."],
+          ["What is the difference between Shift 1 and Shift 2?", "Shift 1 is a government-aided program with lower fees, usually catering to students from economically weaker sections.\nShift 2 is a self-financed program with higher fees and more flexible course options.\nShift 1 usually has higher cut-offs and is more competitive."],
+          ["Can I shift from Shift 2 to Shift 1 next year?", "No, students cannot transfer from Shift 2 to Shift 1."],
+          ["How to get my class timetable?", "Your department faculty will share the timetable either directly in class or through the official student WhatsApp group."]
+        ]
+      },
+      {
+        category: "🎉 CULTURAL & CAMPUS LIFE",
+        qas: [
+          ["Does the college celebrate annual day or cultural functions?", "Yes, the college celebrates annual and cultural functions through its Fine Arts Club, SEEFAC (Seethamma Fine Arts Club), which organizes various events."],
+          ["Is there a freshers’ welcome for 1st years?", "Yes, department seniors and faculty conduct an induction program and welcoming activities for first-year students."],
+          ["Are inter-department competitions conducted?", "Yes, the college hosts inter-departmental competitions during events like Sports Day and through various clubs and departments."],
+          ["Are students allowed to participate in off-campus events?", "Yes, students are encouraged to take part in inter-collegiate competitions, workshops, and external events, and many have received recognition."],
+          ["Does the college celebrate Pongal, Diwali, or other festivals?", "Yes, festivals like Pongal and Diwali are celebrated in the college."],
+          ["Is there a farewell function for final years?", "Yes, a farewell function is conducted to honor and celebrate the seniors with love and gratitude."],
+          ["How to join the cultural team or become a volunteer?", "Seethamma Fine Arts Club (SEEFAC) members will come to the class and ask for volunteers. They will also invite students interested in participating in cultural events."],
+          ["When are college-level celebrations usually held?", "Celebrations are scheduled in the academic calendar and usually happen during festivals, commemorative days, or semester ends."],
+          ["Do we need permission to participate in outside fests?", "Yes, students must get permission from the department or principal before participating in off-campus events."],
+          ["Do we get certificates for participating in events?", "Yes, participants receive certificates. Some departments provide printed certificates, while others offer e-certificates. Winners may also receive prizes."]
+        ]
+      },
+      {
+        category: "👕 DRESS CODE & DISCIPLINE",
+        qas: [
+          ["What is the dress code for boys and girls?", "The college follows a modest and formal dress code for both boys and girls. Students are expected to dress neatly and respectfully while on campus, maintaining a professional appearance suitable for an academic environment."],
+          ["Are jeans and T-shirts allowed?", "No, casual clothing such as jeans, T-shirts, shorts, and other informal outfits are generally not allowed. Students are encouraged to wear formal or semi-formal attire that aligns with college norms."],
+          ["Can we wear smart watches or caps?", "Smart watches are generally allowed unless restricted during exams or practicals. However, caps or hats are not permitted inside classrooms or academic buildings."],
+          ["Is ID card mandatory every day?", "Yes, wearing your college ID card is mandatory every day. It must be visibly worn around the neck at all times while on campus. Failure to wear the ID card may lead to warnings or restricted access to campus services."],
+          ["Is uniform required for any specific department?", "Yes, some departments—especially those involving laboratory or practical sessions—may require a specific uniform. These requirements will be informed by the department faculty at the beginning of the academic year."],
+          ["Is there a fine or punishment for dress code violation?", "Yes, violations of the dress code can result in verbal warnings, written notices, or disciplinary actions depending on the severity and repetition of the offence."],
+          ["Can we wear traditional dress on special days?", "Yes, traditional attire is allowed and even encouraged during cultural celebrations, festivals, or other special events organized by the college."],
+          ["Is there a \"no bag\" or \"no phone\" policy in labs?", "Yes, students are not allowed to use mobile phones inside laboratories. Bags may also be restricted in certain lab areas to ensure safety and prevent distractions. Faculty members will inform students about the specific rules of each lab."]
+        ]
+      },
+      {
+        category: "🏫 ACADEMICS & DEPARTMENTS",
+        qas: [
+          ["What departments are available in the college?", 
+           "DRBCCC Hindu College offers a wide range of departments under Arts, Science, and Commerce streams. Some of the major departments include:\n• B.Com (General, CS, A&F, BM)\n• B.A. (Economics, English, Tamil, Criminology)\n• B.Sc. (Maths, Computer Science, Artificial Intelligence & Data Science, Psychology, Physics, Viscom)\n• BBA\n• M.A. / M.Com / M.Sc. (Postgraduate courses also available in selected streams)"],
+          ["What are the certificate or value-added courses available?", "The college offers various certificate and value-added courses like Tally, Python, Digital Marketing, Soft Skills, and more. These courses enhance employability and skill development."],
+          ["Is there a language lab or computer lab?", "Yes, the college has well-equipped Language Labs for English communication training and Computer Labs for practical sessions in relevant departments."],
+          ["What are the top-rated departments in the college?", "All departments maintain a strong academic standard. However, B.Com (General), Psychology, and Criminology are often highly preferred due to faculty strength, placement support, and student performance."],
+          ["Are there seminars or guest lectures conducted?", "Yes, departments frequently organize seminars, workshops, and guest lectures by industry experts and professors to enhance learning beyond the syllabus."],
+          ["Are there internal marks? How are they calculated?", "Yes, internal marks are part of the evaluation system. They are calculated based on:\n• Attendance\n• Internal Tests\n• Assignments\n• Seminars or class performance\nEach component carries specific weightage (as per university guidelines)."],
+          ["How many units or modules in each semester?", "Each subject usually has 5 to 6 units per semester, depending on the course. Detailed syllabus will be provided by the faculty at the beginning of the semester."],
+          ["Is placement available for UG students?", "Yes, the college has a Placement Cell that conducts placement drives, career guidance sessions, and mock interviews. Many companies visit the campus offering jobs especially in the final year."]
+        ]
+      },
+      {
+        category: "💼 PLACEMENT & CAREER",
+        qas: [
+          ["What companies visit for placement?", "Top companies like TCS, Infosys, Wipro, Capgemini, and Accenture visit the college for placement drives, depending on department and eligibility."],
+          ["Are there any internship opportunities from college?", "Yes, departments and placement cells sometimes provide internship opportunities in collaboration with companies or NGOs."],
+          ["How to join placement training or soft skills training?", "Placement training and soft skills sessions are usually organized by the placement cell. You’ll be informed through your department or class group. Attendance is encouraged for better preparation."],
+          ["How to register for placement?", "Registration is done through the placement officer or department coordinator. You may need to fill out a form or join a Google group as instructed."],
+          ["What is the eligibility for attending placement drives?", "A minimum percentage (usually 60% or above), regular attendance, and no standing arrears are generally required. Criteria may vary depending on the company."],
+          ["Are there alumni talks or mentorship programs?", "Yes, alumni sessions are occasionally conducted to give insights about career paths, industry expectations, and higher studies."],
+          ["Do we get resume-building or mock interview sessions?", "Yes, the college offers resume-building workshops and mock interviews as part of placement preparation. These sessions help build confidence and improve performance."]
+        ]
+      },
+      {
+        category: "📚 LIBRARY & FACILITIES",
+        qas: [
+          ["Is the college library open every day?", "The library is open on all working days during college hours. It remains closed on Sundays and public holidays."],
+          ["Can we borrow books? For how many days?", "Yes, students can borrow books from the library. Usually, books can be borrowed for 2 to 5 days, and the duration may vary depending on the year of study and book availability."],
+          ["Is there Wi-Fi or internet access in the library?", "Yes, the library provides internet access for academic use. Wi-Fi may be available in certain areas for registered students."],
+          ["Is there a digital library?", "Yes, the college provides access to a digital library where students can read e-books, journals, and academic content."],
+          ["How many books can a student borrow at a time?", "Students can borrow up to 2–3 books at a time, depending on their department and year of study."],
+          ["Are reference books allowed to take home?", "No, reference books are only for in-library use and cannot be taken outside."],
+          ["Is there a reading room or study space?", "Yes, the library has a quiet reading room and study area for students to sit and study peacefully."],
+          ["Is there a computer we can use to access journals or typing?", "Yes, the library has computers for accessing online journals and academic work like typing and project research."]
+        ]
+      },
+      {
+        category: "⚽ SPORTS & CLUBS",
+        qas: [
+          ["What sports are available in the college?", "The college offers various sports like cricket, football, volleyball, kabaddi, badminton, table tennis, chess, and athletics."],
+          ["Can we join NCC or NSS?", "Yes, students can join NCC (National Cadet Corps) and NSS (National Service Scheme). Selection is usually done in the first year based on interest and fitness."],
+          ["Are there student clubs like drama, coding, dance, etc.?", "Yes, there are several clubs such as Drama Club, Dance Club, Music Club, Quiz Club, Coding Club, Fine Arts Club, and Literary Club that students can join."],
+          ["Is there a gym facility?", "Yes, the college has a basic gym facility available for students during specific hours."],
+          ["How to register for sports teams?", "Registrations usually happen at the start of the academic year. Sports coordinators and PE staff announce trials, and interested students can attend."],
+          ["Are there annual sports days or intercollege tournaments?", "Yes, the college organizes Annual Sports Day and encourages students to participate in intercollege tournaments."],
+          ["Is there a yoga or fitness club?", "Yes, the college has a Yoga and Fitness Club which conducts regular sessions and wellness programs."],
+          ["What time is the ground available for practice?", "The ground is usually available before class from 5:00 AM to 7:30 AM. After class, it is generally not available, but may be opened occasionally for training sessions or tournaments with prior permission."]
+        ]
+      },
+      {
+        category: "🍛 CANTEEN & TRANSPORT",
+        qas: [
+          ["Is there a canteen in the college?", "Yes, the college has a canteen located near the main building, accessible to both students and staff."],
+          ["What kind of food is served and is it affordable?", "The canteen offers food like vegetable birinje, parotta, vada, juice, and some packed snacks (like bonda, biscuits, etc.). The prices are student-friendly and affordable."],
+          ["What are the canteen working hours for each shift?", "For both Shift I and Shift II, the canteen is open from 8:00 AM to 5:00 PM."],
+          ["Is outside food allowed inside campus?", "Yes, outside food is allowed inside the campus."]
+        ]
+      },
+      {
+        category: "💡 OTHER COMMON DOUBTS",
+        qas: [
+          ["How to apply for scholarship from the college?", "You can apply through the college office or department coordinator. Government and private scholarships are available based on eligibility."],
+          ["Is there an anti-ragging committee?", "Yes, the college has a strict anti-ragging committee. Any issues can be reported anonymously and will be taken seriously."],
+          ["Whom to contact in case of emergency?", "In case of emergency, contact your class tutor, department HOD, or the college office immediately."],
+          ["Is there any student grievance cell?", "Yes, students can raise their concerns through the grievance cell, which ensures fair handling of student complaints."],
+          ["How to get a bonafide or conduct certificate?", "To get a bonafide or conduct certificate, you need to get the Principal’s signature, submit the form to the office, and pay a small fee."],
+          ["Are there WhatsApp groups for notices?", "Yes, most departments maintain official WhatsApp groups to share updates, class info, and important announcements."],
+          ["Where do we report lost ID cards or books?", "Lost items should be reported to the college office or library, depending on what is lost."],
+          ["Is medical help available on campus?", "Basic first aid is available in the college. For major issues, nearby hospitals are accessible."],
+          ["Is there a notice board for every department?", "Yes, each department has a notice board for circulars, schedules, and department-related updates."],
+          ["Are there study holidays before exams?", "Yes, study holidays are usually given before semester exams. The number of days depends on the exam schedule."],
+          ["Can I take leave for personal reasons? How to apply?", "Yes, submit a leave letter to your class tutor, or follow your department’s leave procedure."]
+        ]
+      }
+    ];
+
+    const faqContainer = document.getElementById("faq");
+
+    faqData.forEach(cat => {
+      const catDiv = document.createElement("div");
+      catDiv.className = "category";
+      catDiv.textContent = cat.category;
+
+      const qDiv = document.createElement("div");
+      qDiv.className = "questions";
+
+      // Track the open answer element for this category
+      let openAnswer = null;
+
+      cat.qas.forEach(([q, a]) => {
+        const ques = document.createElement("div");
+        ques.className = "question";
+        ques.textContent = q;
+
+        const ans = document.createElement("div");
+        ans.className = "answer";
+        ans.textContent = a;
+
+        ques.onclick = (e) => {
+          e.stopPropagation(); // Prevent category toggle when clicking a question
+          if (openAnswer && openAnswer !== ans) {
+            openAnswer.classList.remove("show");
+          }
+          const isOpen = ans.classList.toggle("show");
+          openAnswer = isOpen ? ans : null;
+        };
+
+        qDiv.appendChild(ques);
+        qDiv.appendChild(ans);
+      });
+
+      catDiv.onclick = () => {
+        // Close other open categories and their answers
+        const currentlyOpen = faqContainer.querySelector(".questions.show");
+        if (currentlyOpen && currentlyOpen !== qDiv) {
+          currentlyOpen.classList.remove("show");
+          // Close all open answers in that category
+          currentlyOpen.querySelectorAll(".answer.show").forEach(ans => ans.classList.remove("show"));
+        }
+        qDiv.classList.toggle("show");
+      };
+
+      faqContainer.appendChild(catDiv);
+      faqContainer.appendChild(qDiv);
+    });
+  </script>
+</body>
+</html>
